@@ -83,6 +83,24 @@ grunt.initConfig({
 });
 ```
 
+#### Excluding a file from import
+
+```js
+grunt.initConfig({
+  import: {
+    options: {
+      exclude: [
+        'src/foo.js'
+      ]
+    },
+    dist: {
+      src: 'src/intro.js',
+      dest: 'dist/intro.js',
+    }
+  }
+});
+```
+
 #### Running Importer with Uglify after import
 
 In this example, running `grunt watch:js` will parse `src/intro.js` file writing the output to `stage/intro.js` and followup with the Uglify task writing output into `dist/intro.js`

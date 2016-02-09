@@ -137,13 +137,13 @@ grunt.initConfig({
       files: ['src/intro.js'],
       tasks: ['import:dist']
     }
-  }
+  },
   import: {
     options: {},
     dist: {
       src: 'src/intro.js',
       dest: 'stage/intro.js',
-    }
+    },
     tasks: ['uglify:dist']
   },
   uglify: {
@@ -188,6 +188,7 @@ grunt.event.on('import', function(action, filepath, target) {
 
 ## Release History
 
+ * 2016-02-09   v0.1.8   Added exclude option
  * 2014-01-25   v0.1.7   Comments support using /* */ or //
  * 2013-11-09   v0.1.6   Inclusion optimisation by introducing array_unqiue functions
  * 2013-11-09   v0.1.5   Regex fix for strings containing $
@@ -201,4 +202,4 @@ grunt.event.on('import', function(action, filepath, target) {
 
 Task submitted by [-Marcin Rosinski](http://twitter.com/marcinrosinski)
 
-*This file was generated on Wed Nov 06 2013 17:23:08.*
+*This file was generated on Tue Feb 09 2016 15:51:30.*

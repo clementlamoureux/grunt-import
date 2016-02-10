@@ -82,11 +82,11 @@ module.exports = function(grunt) {
               }
             });
             if (exclude) {
-              grunt.log.warn(importpath);
+              grunt.log.writeln('Excluding ' + importpath['yellow']);
+              src = src.split(importReg[i] + ';').join('');
               continue;
             }
           }
-          grunt.log.success(importpath);
           if (importpath.indexOf('/') !== 0) {
             importpath = path.resolve(path.dirname(filepath) + '/' + importpath);
           }

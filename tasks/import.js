@@ -127,6 +127,11 @@ module.exports = function(grunt) {
 
         }).join(options.separator) + footer;
 
+      // Feature wrapper
+      if(options.wrapper){
+        src = options.wrapper + '{\n' + src + '\n}';
+        grunt.log.writeln('Added wrapper ' + options.wrapper);
+      }
       // Write the destination file.
       grunt.file.write(f.dest, src);
       grunt.event.emit('import', 'imported', f.dest, target);
